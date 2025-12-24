@@ -182,8 +182,8 @@ function randomFrom(array) {
 
 // ====== INI UNTUK PANGGIL GEMINI API ======
 async function callGeminiAPI(message) {
-    const API_KEY = 'AIzaSyAY6w9VvsFgg0veaVzDnwqHHOj27REMxjU';
-    const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+    const API_KEY = process.env.GEMINI_API_KEY;
+    const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 
     const prompt = `
     ‼️ ANDA HANYA BOLEH MENJAWAB DALAM LINGKUP INI SAJA:
